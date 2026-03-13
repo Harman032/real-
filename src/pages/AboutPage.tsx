@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen bg-premium-cream dark:bg-premium-black">
+    <div className="min-h-screen bg-premium-cream">
       <Navbar />
       
       {/* Hero */}
@@ -36,7 +36,7 @@ const AboutPage = () => {
             </div>
             <div className="order-1 md:order-2">
               <h2 className="text-4xl md:text-5xl font-serif mb-8">The Golden Standard of Real Estate.</h2>
-              <div className="space-y-6 text-lg text-gray-600 dark:text-gray-400 font-serif leading-relaxed italic">
+              <div className="space-y-6 text-lg text-gray-600 font-serif leading-relaxed italic">
                 <p>Founded on the principle that luxury is not just a price point, but an experience, Golden Estate has been the definitive leader in high-end real estate for over two decades.</p>
                 <p>Our bespoke approach combines cutting-edge data analysis with an artist's eye for architectural significance, ensuring that every listing is presented as a masterpiece.</p>
                 <p>We don't just sell homes; we curate lifestyles for the world's most discerning individuals.</p>

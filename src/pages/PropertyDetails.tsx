@@ -9,7 +9,7 @@ const PropertyDetails = () => {
 
   if (!property) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-premium-cream dark:bg-premium-black">
+      <div className="min-h-screen flex items-center justify-center bg-premium-cream">
         <div className="text-center">
           <h2 className="text-3xl font-serif mb-4">Property Not Found</h2>
           <Link to="/" className="text-premium-gold font-bold border-b border-premium-gold pb-1">Return Home</Link>
@@ -23,7 +23,7 @@ const PropertyDetails = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen bg-premium-cream dark:bg-premium-black"
+      className="min-h-screen bg-premium-cream"
     >
       <Navbar />
       
@@ -69,7 +69,7 @@ const PropertyDetails = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             <div className="lg:col-span-2">
-              <div className="flex justify-between items-center mb-12 pb-8 border-b border-gray-100 dark:border-gray-800">
+              <div className="flex justify-between items-center mb-12 pb-8 border-b border-gray-100">
                 <div className="flex space-x-12">
                   <div className="text-center">
                     <p className="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1">Price</p>
@@ -90,9 +90,9 @@ const PropertyDetails = () => {
                 </div>
               </div>
 
-              <div className="prose prose-lg dark:prose-invert max-w-none mb-16">
+              <div className="prose prose-lg max-w-none mb-16">
                 <h3 className="text-3xl font-serif mb-6">Property Overview</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+                <p className="text-gray-600 leading-relaxed text-lg">
                   {property.description} {property.description}
                 </p>
               </div>
@@ -106,7 +106,7 @@ const PropertyDetails = () => {
                       initial={{ opacity: 0, x: -10 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.1 }}
-                      className="flex items-center space-x-3 text-gray-700 dark:text-gray-300"
+                      className="flex items-center space-x-3 text-gray-700"
                     >
                       <span className="w-2 h-2 bg-premium-gold rounded-full"></span>
                       <span className="font-medium tracking-wide">{feature}</span>
@@ -118,35 +118,35 @@ const PropertyDetails = () => {
 
             {/* Sidebar Contact */}
             <div className="lg:col-span-1">
-              <div className="sticky top-32 bg-white dark:bg-premium-charcoal p-10 border border-gray-100 dark:border-gray-800 shadow-2xl rounded-sm">
+              <div className="sticky top-32 bg-white p-10 border border-gray-100 shadow-2xl rounded-sm">
                 <h3 className="text-2xl font-serif mb-6">Inquire About Listing</h3>
                 <form className="space-y-6">
                   <div>
                     <input 
                       type="text" 
                       placeholder="Your Name" 
-                      className="w-full bg-gray-50 dark:bg-premium-black border border-gray-100 dark:border-gray-700 px-4 py-3 outline-none focus:border-premium-gold"
+                      className="w-full bg-gray-50 border border-gray-100 px-4 py-3 outline-none focus:border-premium-gold"
                     />
                   </div>
                   <div>
                     <input 
                       type="email" 
                       placeholder="Email Address" 
-                      className="w-full bg-gray-50 dark:bg-premium-black border border-gray-100 dark:border-gray-700 px-4 py-3 outline-none focus:border-premium-gold"
+                      className="w-full bg-gray-50 border border-gray-100 px-4 py-3 outline-none focus:border-premium-gold"
                     />
                   </div>
                   <div>
                     <textarea 
                       rows={4}
                       placeholder="How can we help?"
-                      className="w-full bg-gray-50 dark:bg-premium-black border border-gray-100 dark:border-gray-700 px-4 py-3 outline-none focus:border-premium-gold resize-none"
+                      className="w-full bg-gray-50 border border-gray-100 px-4 py-3 outline-none focus:border-premium-gold resize-none"
                     ></textarea>
                   </div>
                   <button className="w-full bg-premium-gold text-white py-4 font-bold uppercase tracking-widest text-sm hover:bg-premium-gold/90 transition-all">
                     Send Inquiry
                   </button>
                 </form>
-                <div className="mt-8 pt-8 border-t border-gray-50 dark:border-gray-800 text-center">
+                <div className="mt-8 pt-8 border-t border-gray-50 text-center">
                   <p className="text-xs uppercase tracking-widest text-gray-400 mb-2 font-bold">Exclusive Agent</p>
                   <p className="font-serif text-lg italic">Alexander Golden</p>
                 </div>

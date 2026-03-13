@@ -3,7 +3,7 @@ import { useProperties } from '../hooks/useProperties';
 const AdminDashboard = () => {
   const { properties, deleteProperty } = useProperties();
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-premium-black flex">
+    <div className="min-h-screen bg-gray-50 flex">
       {/* Sidebar */}
       <aside className="w-64 bg-premium-black text-white p-8 hidden lg:block">
         <div className="flex items-center space-x-2 mb-12">
@@ -44,29 +44,29 @@ const AdminDashboard = () => {
 
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white dark:bg-premium-charcoal p-8 border border-gray-100 dark:border-gray-800 shadow-sm">
+          <div className="bg-white p-8 border border-gray-100 shadow-sm">
             <p className="text-xs uppercase tracking-widest text-gray-400 mb-2 font-bold">Total Listings</p>
             <p className="text-4xl font-serif">{properties.length}</p>
           </div>
-          <div className="bg-white dark:bg-premium-charcoal p-8 border border-gray-100 dark:border-gray-800 shadow-sm">
+          <div className="bg-white p-8 border border-gray-100 shadow-sm">
             <p className="text-xs uppercase tracking-widest text-gray-400 mb-2 font-bold">Active Inquiries</p>
             <p className="text-4xl font-serif">24</p>
           </div>
-          <div className="bg-white dark:bg-premium-charcoal p-8 border border-gray-100 dark:border-gray-800 shadow-sm">
+          <div className="bg-white p-8 border border-gray-100 shadow-sm">
             <p className="text-xs uppercase tracking-widest text-gray-400 mb-2 font-bold">Total Sales</p>
             <p className="text-4xl font-serif">$12.4M</p>
           </div>
         </div>
 
         {/* Property List */}
-        <div className="bg-white dark:bg-premium-charcoal border border-gray-100 dark:border-gray-800 shadow-sm">
-          <div className="p-6 border-b border-gray-50 dark:border-gray-800">
+        <div className="bg-white border border-gray-100 shadow-sm">
+          <div className="p-6 border-b border-gray-50">
             <h2 className="text-xl font-serif">Property Inventory</h2>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-left">
               <thead>
-                <tr className="bg-gray-50 dark:bg-premium-black/50 text-xs uppercase tracking-widest text-gray-400 font-bold">
+                <tr className="bg-gray-50 text-xs uppercase tracking-widest text-gray-400 font-bold">
                   <th className="px-6 py-4">Property</th>
                   <th className="px-6 py-4">Type</th>
                   <th className="px-6 py-4">Price</th>
@@ -74,9 +74,9 @@ const AdminDashboard = () => {
                   <th className="px-6 py-4">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-50 dark:divide-gray-800">
+              <tbody className="divide-y divide-gray-50">
                 {properties.map(p => (
-                  <tr key={p.id} className="hover:bg-gray-50/50 dark:hover:bg-premium-black/20 transition-colors">
+                  <tr key={p.id} className="hover:bg-gray-50/50 transition-colors">
                     <td className="px-6 py-4 font-medium">{p.title}</td>
                     <td className="px-6 py-4 text-sm">{p.type}</td>
                     <td className="px-6 py-4 text-sm">${p.price.toLocaleString()}</td>

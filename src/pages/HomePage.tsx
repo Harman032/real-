@@ -103,14 +103,14 @@ const HomePage = () => {
       </section>
 
       {/* Featured Properties */}
-      <section className="py-24 bg-premium-cream dark:bg-premium-black">
+      <section className="py-24 bg-premium-cream">
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-end mb-16">
             <div>
               <p className="text-premium-gold uppercase tracking-widest font-bold mb-2">Our Selection</p>
               <h2 className="text-4xl md:text-5xl font-serif">Featured Estates</h2>
             </div>
-            <Link to="/buy" className="text-premium-black dark:text-premium-cream border-b-2 border-premium-gold pb-1 font-bold hover:text-premium-gold transition-colors">
+            <Link to="/buy" className="text-premium-black border-b-2 border-premium-gold pb-1 font-bold hover:text-premium-gold transition-colors">
               View All Listings
             </Link>
           </div>

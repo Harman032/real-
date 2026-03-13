@@ -1,7 +1,7 @@
 const LoginPage = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-premium-cream dark:bg-premium-black px-6">
-      <div className="max-w-md w-full bg-white dark:bg-premium-charcoal p-10 shadow-2xl rounded-sm border border-gray-100 dark:border-gray-800">
+    <div className="min-h-screen flex items-center justify-center bg-premium-cream px-6">
+      <div className="max-w-md w-full bg-white p-10 shadow-2xl rounded-sm border border-gray-100">
         <div className="text-center mb-10">
           <div className="inline-block w-12 h-12 bg-premium-gold rotate-45 flex items-center justify-center mb-6">
             <span className="text-white -rotate-45 font-serif font-bold italic text-xl">G</span>
@@ -15,7 +15,7 @@ const LoginPage = () => {
             <label className="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2">Email Address</label>
             <input 
               type="email" 
-              className="w-full bg-gray-50 dark:bg-premium-black border border-gray-200 dark:border-gray-700 px-4 py-3 outline-none focus:border-premium-gold transition-colors"
+              className="w-full bg-gray-50 border border-gray-200 px-4 py-3 outline-none focus:border-premium-gold transition-colors"
               placeholder="name@example.com"
             />
           </div>
@@ -23,11 +23,11 @@ const LoginPage = () => {
             <label className="block text-xs uppercase tracking-widest font-bold text-gray-400 mb-2">Password</label>
             <input 
               type="password" 
-              className="w-full bg-gray-50 dark:bg-premium-black border border-gray-200 dark:border-gray-700 px-4 py-3 outline-none focus:border-premium-gold transition-colors"
+              className="w-full bg-gray-50 border border-gray-200 px-4 py-3 outline-none focus:border-premium-gold transition-colors"
               placeholder="••••••••"
             />
           </div>
-          <button className="w-full bg-premium-black dark:bg-premium-gold text-white py-4 font-bold uppercase tracking-[0.2em] text-sm hover:opacity-90 transition-all">
+          <button className="w-full bg-premium-black text-white py-4 font-bold uppercase tracking-[0.2em] text-sm hover:opacity-90 transition-all">
             Sign In
           </button>
         </form>

@@ -25,7 +25,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
       </div>
       <div className="p-6">
         <div className="flex justify-between items-start mb-2">
-          <h3 className="text-xl font-serif font-semibold group-hover:text-premium-gold transition-colors text-premium-black dark:text-premium-cream">
+          <h3 className="text-xl font-serif font-semibold group-hover:text-premium-gold transition-colors text-premium-black">
             {property.title}
           </h3>
           <p className="text-premium-gold font-bold text-lg">
@@ -39,15 +39,15 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
           </svg>
           {property.location}
         </p>
-        <div className="flex justify-between border-t border-gray-100 dark:border-gray-800 pt-4 text-sm text-gray-500">
+        <div className="flex justify-between border-t border-gray-100 pt-4 text-sm text-gray-500">
           <span className="flex items-center">
-            <span className="font-bold text-premium-black dark:text-premium-cream mr-1">{property.beds}</span> Beds
+            <span className="font-bold text-premium-black mr-1">{property.beds}</span> Beds
           </span>
           <span className="flex items-center">
-            <span className="font-bold text-premium-black dark:text-premium-cream mr-1">{property.baths}</span> Baths
+            <span className="font-bold text-premium-black mr-1">{property.baths}</span> Baths
           </span>
           <span className="flex items-center">
-            <span className="font-bold text-premium-black dark:text-premium-cream mr-1">{property.area}</span> sqft
+            <span className="font-bold text-premium-black mr-1">{property.area}</span> sqft
           </span>
         </div>
       </div>

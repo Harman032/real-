@@ -7,7 +7,7 @@
   --color-gold-dark: #AA8B24;
   --color-premium-black: #1A1A1A;
   --color-premium-charcoal: #2C2C2C;
-  --color-premium-cream: #F5F5F7;
+  --color-premium-cream: #FFFFFF;
   --color-premium-navy: #0A1128;
 
   --font-serif: "Playfair Display", serif;
@@ -23,7 +23,7 @@
   }
   
   body {
-    @apply bg-premium-cream text-premium-black dark:bg-premium-black dark:text-premium-cream antialiased selection:bg-premium-gold/30;
+    @apply bg-premium-cream text-premium-black antialiased selection:bg-premium-gold/30;
     font-family: var(--font-sans);
   }
 
@@ -43,10 +43,10 @@
   }
 
   .premium-card {
-    @apply bg-white dark:bg-premium-charcoal border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-premium transition-all duration-700 rounded-sm overflow-hidden;
+    @apply bg-white border border-gray-100 shadow-sm hover:shadow-premium transition-all duration-700 rounded-sm overflow-hidden;
   }
 
   .input-field {
-    @apply bg-gray-50 dark:bg-premium-black border border-gray-100 dark:border-gray-700 px-4 py-3 outline-none focus:border-premium-gold transition-all duration-300 font-medium;
+    @apply bg-gray-50 border border-gray-100 px-4 py-3 outline-none focus:border-premium-gold transition-all duration-300 font-medium;
   }
 }
