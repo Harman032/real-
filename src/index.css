@@ -1,50 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
   --color-premium-gold: #D4AF37;
+  --color-gold-light: #F1D592;
+  --color-gold-dark: #AA8B24;
   --color-premium-black: #1A1A1A;
   --color-premium-charcoal: #2C2C2C;
   --color-premium-cream: #F5F5F7;
   --color-premium-navy: #0A1128;
 
   --font-serif: "Playfair Display", serif;
-  --font-sans: Inter, sans-serif;
+  --font-sans: "Inter", sans-serif;
+
+  --shadow-premium: 0 20px 50px rgba(0, 0, 0, 0.1);
+  --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.2);
 }
 
 @layer base {
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap');
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-premium-cream text-premium-black dark:bg-premium-black dark:text-premium-cream antialiased selection:bg-premium-gold/30;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    @apply tracking-tight;
+  }
 }
 
-:root {
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@layer components {
+  .premium-gradient {
+    background: linear-gradient(135deg, var(--color-premium-black) 0%, var(--color-premium-charcoal) 100%);
+  }
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #1A1A1A;
+  .gold-gradient {
+    background: linear-gradient(135deg, var(--color-premium-gold) 0%, var(--color-gold-dark) 100%);
+  }
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  .premium-card {
+    @apply bg-white dark:bg-premium-charcoal border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-premium transition-all duration-700 rounded-sm overflow-hidden;
+  }
 
-body {
-  @apply bg-premium-cream text-premium-black dark:bg-premium-black dark:text-premium-cream;
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
-}
-
-.premium-gradient {
-  background: linear-gradient(135deg, #1A1A1A 0%, #2C2C2C 100%);
-}
-
-.premium-card {
-  @apply bg-white dark:bg-premium-charcoal border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-500 rounded-sm;
+  .input-field {
+    @apply bg-gray-50 dark:bg-premium-black border border-gray-100 dark:border-gray-700 px-4 py-3 outline-none focus:border-premium-gold transition-all duration-300 font-medium;
+  }
 }
