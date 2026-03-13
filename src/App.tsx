@@ -7,6 +7,9 @@ import PropertyDetails from './pages/PropertyDetails'
 import BuyPage from './pages/BuyPage'
 import SellPage from './pages/SellPage'
 import AboutPage from './pages/AboutPage'
+import ComingSoon from './pages/ComingSoon'
+import ScrollToTop from './components/ui/ScrollToTop'
+import Footer from './components/layout/Footer'
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -20,6 +23,8 @@ const AnimatedRoutes = () => {
         <Route path="/buy" element={<PageWrapper><BuyPage /></PageWrapper>} />
         <Route path="/sell" element={<PageWrapper><SellPage /></PageWrapper>} />
         <Route path="/about" element={<PageWrapper><AboutPage /></PageWrapper>} />
+        <Route path="/coming-soon" element={<PageWrapper><ComingSoon /></PageWrapper>} />
+        <Route path="*" element={<PageWrapper><ComingSoon /></PageWrapper>} />
       </Routes>
     </AnimatePresence>
   );
@@ -39,7 +44,9 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => (
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <AnimatedRoutes />
+      <Footer />
     </Router>
   )
 }

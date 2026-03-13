@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useProperties } from '../hooks/useProperties';
 
 const AdminDashboard = () => {
@@ -14,22 +15,22 @@ const AdminDashboard = () => {
         </div>
         
         <nav className="space-y-6">
-          <a href="#" className="flex items-center text-premium-gold font-bold">
+          <Link to="/coming-soon" className="flex items-center text-premium-gold font-bold">
             <span className="w-2 h-2 bg-premium-gold rounded-full mr-3"></span>
             Dashboard
-          </a>
-          <a href="#" className="flex items-center text-gray-400 hover:text-white transition-colors">
+          </Link>
+          <Link to="/coming-soon" className="flex items-center text-gray-400 hover:text-white transition-colors">
             <span className="w-2 h-2 border border-gray-400 rounded-full mr-3"></span>
             Properties
-          </a>
-          <a href="#" className="flex items-center text-gray-400 hover:text-white transition-colors">
+          </Link>
+          <Link to="/coming-soon" className="flex items-center text-gray-400 hover:text-white transition-colors">
             <span className="w-2 h-2 border border-gray-400 rounded-full mr-3"></span>
             Leads
-          </a>
-          <a href="#" className="flex items-center text-gray-400 hover:text-white transition-colors">
+          </Link>
+          <Link to="/coming-soon" className="flex items-center text-gray-400 hover:text-white transition-colors">
             <span className="w-2 h-2 border border-gray-400 rounded-full mr-3"></span>
             Settings
-          </a>
+          </Link>
         </nav>
       </aside>
 

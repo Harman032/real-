@@ -129,9 +129,11 @@ const HomePage = () => {
           <h2 className="text-4xl md:text-6xl font-serif mb-8 max-w-4xl mx-auto leading-relaxed">
             Invest in a legacy that speaks of <span className="italic text-premium-gold">timeless elegance</span> and modern luxury.
           </h2>
-          <button className="bg-premium-gold text-white px-12 py-5 font-bold hover:bg-premium-gold/90 transition-all uppercase tracking-[0.2em] text-sm">
-            Consult a Specialist
-          </button>
+          <Link to="/coming-soon">
+            <button className="bg-premium-gold text-white px-12 py-5 font-bold hover:bg-premium-gold/90 transition-all uppercase tracking-[0.2em] text-sm">
+              Consult a Specialist
+            </button>
+          </Link>
         </div>
       </section>
     </div>
