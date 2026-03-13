@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-premium-gold: #D4AF37;
+  --color-premium-black: #1A1A1A;
+  --color-premium-charcoal: #2C2C2C;
+  --color-premium-cream: #F5F5F7;
+  --color-premium-navy: #0A1128;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: Inter, sans-serif;
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap');
+}
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #1A1A1A;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply bg-premium-cream text-premium-black dark:bg-premium-black dark:text-premium-cream;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.premium-gradient {
+  background: linear-gradient(135deg, #1A1A1A 0%, #2C2C2C 100%);
+}
+
+.premium-card {
+  @apply bg-white dark:bg-premium-charcoal border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-500 rounded-sm;
+}
